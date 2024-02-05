@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+
+</head>
+<body>
+  <div class="page-container">
+    <app-navbar></app-navbar>
+    <div class="content-container">
+      <button routerLink="/addphone">New Phone To Repair</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Phone Model</th>
+            <th>Panne</th>
+            <th>Etat</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let phone of phones; let i = index">
+            <td>{{ phone.name }}</td>
+            <td>{{ phone.lastName }}</td>
+            <td>{{ phone.tel }}</td>
+            <td>{{ phone.model }}</td>
+            <td>{{ phone.panne }}</td>
+            <td>{{ phone.etat }}</td>
+            <td>
+              <div class="button-container">
+                <button class="modify-button" (click)="navigateToModifyPhone(phone)">Modify </button>
+                <button class="delete-button" (click)="confirmDelete(phone.id)">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<app-footer></app-footer>
+
+</html>

@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<body>
+  <h2></h2>
+  <img src="../assets/images/addphone.jpg" alt="Image" class="side-image">
+  <div class="container">
+
+  <form (ngSubmit)="updatePhone()" #phoneForm="ngForm" class="inscription-form">
+    <legend>
+      <h1>Modify Phone Details</h1>
+  </legend>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="phone.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="phone.lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tel">Phone Number:</label>
+      <input type="number" id="tel" name="tel" [(ngModel)]="phone.tel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="model">Phone Model:</label>
+      <input type="text" id="model" name="model" [(ngModel)]="phone.model" required>
+    </div>
+
+    <div class="form-group">
+      <label for="panne">Panne:</label>
+      <input type="text" id="panne" name="panne" [(ngModel)]="phone.panne" required>
+    </div>
+
+    <div class="form-group">
+      <label for="etat">Etat:</label>
+      <select style="height: 40px;" id="etat" placeholder="Etat" name="etat" [(ngModel)]="phone.etat" required>
+
+          <option value="In Store">In Store</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Repaired">Repaired</option>
+      </select>
+  </div>
+
+    <button type="submit">Update Phone</button>
+  </form>
+
+</div>
+</body>

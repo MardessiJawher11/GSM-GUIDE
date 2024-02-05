@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<nav>
+  <div class="logo"><img src="../assets/images/logo.png"></div>
+  <a routerLink="/home"><i class="fas fa-home"></i>Home</a>
+
+  <a routerLink="/track">Track Your Phone</a>
+  <ng-template [ngIf]="role == 'admin'"> <a routerLink="/allphones">All Phones</a></ng-template>
+<div class="navbar-right">
+  <ng-container *ngIf="!role">
+    <a routerLink="/login">Login</a>
+    <a routerLink="/signup">Sign Up</a>
+  </ng-container>
+  <ng-container *ngIf="role">
+    <a [routerLink]="['/profil', id]">profil</a>
+    </ng-container>
+  <ng-container *ngIf="role">
+    <a (click)="destroy()">Log Out</a>
+  </ng-container>
+
+</div>
+</nav>
+
+</body>
+</html>

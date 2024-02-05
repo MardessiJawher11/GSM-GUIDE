@@ -1,0 +1,51 @@
+body{
+  background: linear-gradient(45deg, #ffffff, #aad6ec);
+  height: 100vh;
+
+}
+.page-container {
+  font-family: Arial, sans-serif;
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 8px;
+}
+
+.modify-button,
+.delete-button {
+  padding: 5px 10px;
+  border: 2px;
+}
+
+button {
+  border: 2px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #aad6ec;
+}

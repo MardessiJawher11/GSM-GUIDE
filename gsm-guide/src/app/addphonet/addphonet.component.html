@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Phone To repair</title>
+</head>
+<app-navbar></app-navbar>
+<body>
+  <img src="../assets/images/addphone.jpg" alt="Image" class="side-image">
+
+
+
+<div class="container">
+
+    <form (ngSubmit)="onSubmit()" #addphoneform class="inscription-form">
+      <legend>
+        <h1>Add Phone To repair</h1>
+    </legend>
+        <div class="form-row">
+            <label for="firstName">First Name:</label>
+            <input placeholder="Name" type="text" id="name" name="name" [(ngModel)]="phonet.name" required>
+                  </div>
+
+        <div class="form-row">
+            <label for="lastName">Last Name:</label>
+            <input placeholder="Last Name" type="text" id="lastName" name="lastNAme" [(ngModel)]="phonet.lastName" required>
+        </div>
+
+
+        <div class="form-row">
+            <label for="phoneNumber">Phone Number:</label>
+            <input placeholder="Phone Number" type="number" id="tel" name="tel" [(ngModel)]="phonet.tel" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Model:</label>
+            <input placeholder="Phone Model" type="text" id="model" name="model" [(ngModel)]="phonet.model" required>
+        </div>
+
+        <div class="form-row">
+            <label for="password">Panne:</label>
+            <input placeholder="Panne" type="text" id="panne" name="panne" [(ngModel)]="phonet.panne" required>
+        </div>
+
+        <div class="form-row">
+          <label for="etat">Etat:</label>
+          <select style="height: 30px;" id="etat" placeholder="Etat" name="etat" [(ngModel)]="phonet.etat" required>
+            <option value="" style="color: grey;">Select Etat</option>
+              <option value="In Store">In Store</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Repaired">Repaired</option>
+          </select>
+      </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
+<app-footer></app-footer>

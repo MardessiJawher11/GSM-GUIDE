@@ -1,0 +1,62 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ffffff, #aad6ec);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.side-image {
+  max-width: 25%;
+  margin-right: 30px;
+  border-radius: 20px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.inscription-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
